@@ -1,0 +1,347 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe*2",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex->bib->pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.log",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.nav",
+        "*.snm",
+        "*.fdb_latexmk",
+        "*.synctex.gz",
+        "*.bbl"
+    ],
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "D:\\SumatraPDF\\SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "-forward-search",
+        "%TEX%",
+        "%LINE%",
+        "-reuse-instance",
+        "-inverse-search",
+        "\"C:/Users/f00613555/AppData/Local/Programs/Microsoft VS Code/Code.exe\" \"C:/Users/f00613555/AppData/Local/Programs/Microsoft VS Code/resources/app/out/cli.js\" -gr \"%f\":\"%l\"",
+        "%PDF%"
+    ],
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    
+    "editor.fontFamily": "Google Sans Code, FiraCode Nerd Font, JetBrains Mono, Cascadia Code, Maple Mono, CaskaydiaCove Nerd Font Mono, '微软雅黑', Source Code Pro, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "files.eol": "\n",
+    "editor.suggestSelection": "first",
+    "editor.renderControlCharacters": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.cursorSurroundingLines": 10,
+    "python.defaultInterpreterPath": "D:/software/anaconda/python.exe",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "terminal.external.windowsExec": "C:\\Users\\f00613555\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+    "editor.largeFileOptimizations": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "[Default Dark+]": {
+            "enabled": true // enable for a particular theme
+        }
+    },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.rulers": [
+        80
+    ],
+    "window.openFilesInNewWindow": "on",
+    "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+    "http.proxyStrictSSL": false,
+    "remote.SSH.remotePlatform": {
+        "104": "linux",
+        "205": "linux",
+        "15fk": "linux",
+        "15jh": "linux",
+        "10.155.156.75": "linux",
+        "75fk": "linux",
+        "57fk": "linux",
+        "10.170.22.16": "linux",
+        "51fk": "linux",
+        "7.216.55.168": "linux",
+        "10.170.22.62": "linux",
+        "10.170.22.205": "linux",
+        "205-vllm-dp": "linux",
+        "205-AIB": "linux",
+        "A3-18-prefill": "linux",
+        "A3-15-prefill": "linux",
+        "7.242.109.250": "linux",
+        "7.150.11.214": "linux",
+        "7.150.14.67": "linux"
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "expand",
+    "syntax.highlightLanguages": [
+        "c",
+        "cpp",
+        "python",
+        "typescript",
+        "typescriptreact",
+        "javascript",
+        "go",
+        "rust",
+        "php",
+        "ruby",
+        "shellscript",
+        "ocaml",
+        "lua"
+    ],
+    "git.ignoreLegacyWarning": true,
+    "notebook.output.scrolling": true,
+    "editor.fontSize": 16,
+    "todo-tree.general.statusBar": "tags",
+    "workbench.colorTheme": "One Candy",
+    "gitblame.inlineMessageEnabled": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "interactiveWindow.executeWithShiftEnter": true,
+    "files.autoSave": "onFocusChange",
+    "pyqt-integration.pyuic.cmd": "D:\\software\\anaconda\\Scripts\\pyuic5.exe",
+    "pyqt-integration.qtdesigner.path": "D:\\software\\anaconda\\Library\\bin\\designer.exe",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.options.statusBarVisibility": "compact",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "notebook.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSaveMode": "modifications",
+    "python.condaPath": "D:/software/anaconda/Scripts/conda.exe",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": false,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.typeEvaluation.strictDictionaryInference": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "baidu.comate.privateService": "",
+    "baidu.comate.username": "LBJfk",
+    "baidu.comate.license": "5ba12913-fe2c-4353-97d3-9bbf744b56cd",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "python": "cd $dir && python $fileName",
+        "go": "go run",
+        "typescript": "ts-node",
+    },
+    "baidu.comate.completionLength": "auto",
+    "gitblame.inlineMessageFormat": "${author.name} (${time.ago}) ${commit.summary}",
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
+    "workbench.productIconTheme": "fluent-icons",
+    "git.openRepositoryInParentFolders": "never",
+    "code-runner.runInTerminal": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.mouseWheelZoom": true,
+    "cmake.showConfigureWithDebuggerNotification": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "workbench.iconTheme": "material-icon-theme",
+    "baidu.comate.superCompletion": {
+        "superCompletion": false,
+        "autoImport": false
+    },
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "go.toolsManagement.autoUpdate": true,
+    "editor.formatOnSave": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "baidu.comate.enableCodelens": {
+        "enableInlineUnitTest": true,
+        "enableInlineExplain": true,
+        "enableInlineDocstring": true,
+        "enableInlineSplit": true,
+        "enableInlineComment": true,
+        "enableInlineOptimize": true,
+        "enableInlineLog": true
+    },
+    "flake8.args": [
+        "--max-line-length",
+        "100"
+    ],
+    "git.autofetch": true,
+    "git.autofetchPeriod": 7200,
+    "claudeCode.environmentVariables": [
+        {
+            "name": "http_proxy",
+            "value": ""
+        },
+        {
+            "name": "https_proxy",
+            "value": ""
+        },
+        {
+            "name": "HTTP_PROXY",
+            "value": ""
+        },
+        {
+            "name": "HTTPS_PROXY",
+            "value": ""
+        }
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "[shellscript]": {
+        "editor.defaultFormatter": "mkhl.shfmt",
+        "files.eol": "\n"
+    },
+    "shfmt.executablePath": "D:/software/shfmt.exe",
+    "claudeCode.preferredLocation": "panel",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+}
