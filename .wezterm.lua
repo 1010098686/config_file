@@ -5,7 +5,11 @@ local launch_menu = {}
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
   table.insert(launch_menu, {
     label = "PowerShell",
-    args = {"pwsh"},
+    args = {"powershell"},
+  })
+  table.insert(launch_menu, {
+    label = "pwsh",
+    args = {"pwsh"}
   })
 
   -- Enumerate any WSL distributions that are installed and add those to the menu
@@ -32,13 +36,15 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
   end
 end
 
-return {
+local config = {
   automatically_reload_config = true,
   window_close_confirmation = "NeverPrompt",
   window_decorations = "RESIZE",
+  initial_cols = 150,
+  initial_rows = 35,
   launch_menu = launch_menu,
   default_prog = {"pwsh"},
-  font = wezterm.font("CaskaydiaCove Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"}),
+  font = wezterm.font("FiraCode Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"}),
   harfbuzz_features = {'liga=1'},
   font_size=14,
   keys={
@@ -46,20 +52,20 @@ return {
     {key="RightArrow", mods="SHIFT|ALT", action=wezterm.action.SplitHorizontal{domain="CurrentPaneDomain"}},
     {key="e", mods="ALT", action=wezterm.action.QuitApplication}
   },
-  color_scheme = 'Dracula+',
+  color_scheme = 'Catppuccin Macchiato',
   background = {
-    {
-      source={
-        File="C:\\Users\\f00613555\\Pictures\\wallpapers\\wallhaven-p9j5mj.jpg"
-      },
-      hsb={
-        hue=1.0,
-        saturation=1.02,
-        brightness=0.1
-      },
-      width="100%",
-      height="100%"
-    },
+    -- {
+    --   source={
+    --     File="C:\\Users\\f00613555\\Pictures\\wallpapers\\wallhaven-7pze9v.png"
+    --   },
+    --   hsb={
+    --     hue=1.0,
+    --     saturation=1.02,
+    --     brightness=0.1
+    --   },
+    --   width="100%",
+    --   height="100%"
+    -- },
     {
       source={
         Color="#282c35"
@@ -76,3 +82,8 @@ return {
     bottom=0
   }
 }
+
+-- local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
+-- bar.apply_to_config(config)
+
+return config
