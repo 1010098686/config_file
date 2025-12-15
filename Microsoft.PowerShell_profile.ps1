@@ -10,6 +10,11 @@ Set-Alias -Name ll -Value eza_ll
 Function fzf_preview {fzf --preview "bat --color=always --style=numbers --line-range=:500 {}"}
 Set-Alias -Name fzfp -Value fzf_preview
 
+function which_command($command) {
+    Get-Command $command | Select-Object -ExpandProperty Source
+}
+Set-Alias -Name which -Value which_command
+
 
 $env:httpproxy="http://f00613555:%40%40Fk950803@proxy.huawei.com:8080"
 
