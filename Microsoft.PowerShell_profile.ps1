@@ -33,7 +33,7 @@ Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionViewStyle ListView
 
 # 设置 Tab 为菜单补全和 Intellisense
-Set-PSReadLineKeyHandler -Key "Tab" -Function Complete
+Set-PSReadLineKeyHandler -Key "Tab" -Function MenuComplete
 
 # 设置 Ctrl+d 为退出 PowerShell
 Set-PSReadlineKeyHandler -Key "Ctrl+d" -Function ViExit
