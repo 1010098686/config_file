@@ -11,6 +11,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     label = "pwsh",
     args = {"pwsh"}
   })
+  default_prog = "pwsh"
 
   -- Enumerate any WSL distributions that are installed and add those to the menu
   local success, wsl_list, wsl_err = wezterm.run_child_process({"wsl.exe", "-l"})
@@ -34,6 +35,12 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
       })
     end
   end
+else
+  table.insert(launch_menu, {
+    label = "zsh",
+    args = { "zsh" }
+  })
+  default_prog = "zsh"
 end
 
 local config = {
@@ -43,7 +50,7 @@ local config = {
   initial_cols = 150,
   initial_rows = 35,
   launch_menu = launch_menu,
-  default_prog = {"pwsh"},
+  default_prog = {default_prog},
   font = wezterm.font("FiraCode Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"}),
   harfbuzz_features = {'liga=1'},
   font_size=14,
