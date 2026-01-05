@@ -1,0 +1,21 @@
+bind-key r source-file ~/.config/tmux/tmux.conf \; display-message "tmux.conf reloaded!"
+set -g base-index 1
+set -g status-interval 3
+set -g mouse on
+
+#style
+gray_light="#2a2c3e"
+green_soft="#00FF80"
+cyan_soft="#88C0D0"
+white="#ffffff"
+
+set -g status-style "fg=${gray_light},bg=colour236"
+set -g status-left-length 100
+set -g status-left "#[fg=${green_soft},bold][\uebc7 #S] #[fg=${white},nobold] | "
+set -g status-right "#[fg=colour250,bg=colour236] %Y-%m-%d #[fg=cyan,bg=colour237] %H:%M:%S "
+set -g window-status-current-format "#[fg=${cyan_soft},bold] \uf111 #[underscore]#I:#W"
+set -g window-status-format "#[fg=${white},bg=default,nobold] #I:#W"
+
+set -g pane-active-border-style fg=colour19
+
+set -g pane-border-style fg=colour238
